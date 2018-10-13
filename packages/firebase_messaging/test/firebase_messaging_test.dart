@@ -134,6 +134,11 @@ void main() {
     firebaseMessaging.unsubscribeFromTopic(myTopic);
     verify(mockChannel.invokeMethod('unsubscribeFromTopic', myTopic));
   });
+  
+    test('getToken', () {
+    firebaseMessaging.getToken();
+    verify(mockChannel.invokeMethod('getToken'));
+  });
 }
 
 class MockMethodChannel extends Mock implements MethodChannel {}
